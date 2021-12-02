@@ -1,0 +1,10 @@
+<div class="container">
+  <app-ticket *ngFor="let item of tickets$ | async"
+              (buyTicket)="buyTicket($event)"
+              [ticket]="item"></app-ticket>
+
+  <h2>History</h2>
+  <app-ticket *ngFor="let item of history$ | async"
+              (buyTicket)="buyTicket($event)"
+              [ticket]="item"></app-ticket>
+</div>
